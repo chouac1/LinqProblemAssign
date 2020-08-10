@@ -32,16 +32,23 @@ namespace LinqProblemsAssignment
 
 
             //---------------------------------------- with LINQ ----------------------------------------
-            var words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
-            var wordsWithTh = words.Where(w => w.Contains("th"));
-            foreach (var word in wordsWithTh)
+            //var words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
+            //var wordsWithTh = words.Where(w => w.Contains("th"));
+            //foreach (var word in wordsWithTh)
+            //{
+            //    Console.WriteLine(word);
+            //    Console.ReadLine();
+            //}
+
+            //---------------------------------------- Question 2 ----------------------------------------
+            var names = new List<string>() { "Mike", "Brad", "Nevin", "Zack", "Mike" };
+            var noDuplicateNames = names.Distinct();
+            foreach (var name in noDuplicateNames)
             {
-                Console.WriteLine(word);
+                Console.WriteLine(name);
                 Console.ReadLine();
             }
 
-            //---------------------------------------- Question 2 ----------------------------------------
-            var names = new List<string>
         }
     }
 }
