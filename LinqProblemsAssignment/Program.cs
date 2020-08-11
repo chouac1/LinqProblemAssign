@@ -47,8 +47,14 @@ namespace LinqProblemsAssignment
             var lettersofName = "Terril";
             var stringsToChar = lettersofName.ToCharArray();
             var charToStringList = stringsToChar.Select(a => a.ToString()).ToList();
-            var sortedList = charToStringList.OrderBy(a => a).ToList();
+            var distinctLetters = charToStringList.Distinct();
+            foreach(string letter in distinctLetters)
+            {
+                Console.WriteLine($"{letter} Amount: {charToStringList.Where(l => l == letter).Count()}");
+            }
+            //var sortedList = charToStringList.OrderBy(a => a).ToList();
 
+            
 
             //---------------------------------------- Test ----------------------------------------
 
