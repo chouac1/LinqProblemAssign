@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -36,6 +37,7 @@ namespace LinqProblemsAssignment
             var classGrades1 = classGrades.Select(g => g.Split(',')).ToList();
             var classGrades2 = classGrades1.Select(g => g.Select(h => int.Parse(h)).ToList()).ToList(); //'sort,' drop the lowest value
             var sortedList = classGrades2.Select(h => h.OrderBy(i => i).ToList()).ToList();
+            var droppedList = sortedList.Select(i => i.Take(4).ToList()).ToList();
 
             //---------------------------------------- Test ----------------------------------------
 
