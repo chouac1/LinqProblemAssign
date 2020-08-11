@@ -36,8 +36,9 @@ namespace LinqProblemsAssignment
             var classGrades = new List<string>() { "80,100,92,89,65", "93,81,78,84,69", "73,88,83,99,64", "98,100,66,74,55" };
             var classGrades1 = classGrades.Select(g => g.Split(',')).ToList();
             var classGrades2 = classGrades1.Select(g => g.Select(h => int.Parse(h)).ToList()).ToList(); //'sort,' drop the lowest value
-            var sortedList = classGrades2.Select(h => h.OrderBy(i => i).ToList()).ToList();
+            var sortedList = classGrades2.Select(h => h.OrderByDescending(i => i).ToList()).ToList();
             var droppedList = sortedList.Select(i => i.Take(4).ToList()).ToList();
+            var avgList = droppedList.Average(i => i.Average());
 
             //---------------------------------------- Test ----------------------------------------
 
