@@ -46,7 +46,8 @@ namespace LinqProblemsAssignment
             //---------------------------------------- Question 4 ----------------------------------------          
             var lettersofName = "Terril";
             var stringsToChar = lettersofName.ToCharArray();
-            var alphaLetters = stringsToChar.Select(a => a.ToString()).ToList();
+            var charToStringList = stringsToChar.Select(a => a.ToString()).ToList();
+            var sortedList = charToStringList.OrderBy(a => a).ToList();
 
 
             //---------------------------------------- Test ----------------------------------------
